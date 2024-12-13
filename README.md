@@ -5,6 +5,11 @@ dFluor is a python package for calculate differentiation value from fluorescence
 # Install
 ```
 git clone --recursive https://github.com/SDH222/dFluor
+conda create -n newEnv python=3.9
+conda activate newEnv
+cd /path/to/dFluor/package
+pip install -r requirements.txt
+pip install .
 ```
 <br>  
 
