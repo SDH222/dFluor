@@ -3,7 +3,7 @@
 dFluor is a python package for calculate differentiation value from fluorescence time course imaging data  
 
 # Install
-```
+```python
 conda create -n newEnv python=3.9
 conda activate newEnv
 git clone --recursive https://github.com/SDH222/dFluor
@@ -15,13 +15,13 @@ pip install ./dFluor
 # Usage
 Path for input directory should contain folder titled "IN" with input .nd2 or .tif files.  
 like
-```
+```python
 /mnt/c/users/SDH/Desktop/IN/sample.tif
 ```
 <br>  
 
 Differential values could be calculated as follows.  
-```
+```python
 import dFluor
 inDir = "/mnt/c/users/SDH/Desktop/" # Path for directory should contain folder titled "IN" with input .nd2 or .tif files. This package can process multiple .nd2/.tif files.
 
@@ -49,7 +49,7 @@ usePreviousAnalysisDir = ""       # If the above setting is True, enter the dire
 <br>  
 
 Calculated differential values could be summarized as follows.
-```
+```python
 import dFluor
 
 outDir = "/mnt/c/users/SDH/Desktop/OUT/out_241015_15.07.39___" # path for output directory calculated by dFluor.main.dif()
