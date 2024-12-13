@@ -23,7 +23,7 @@ like
 Differential values could be calculated as follows.  
 ```
 import dFluor
-inDir = "/mnt/c/users/SDH/Desktop/" # Path for directory should contain folder titled "IN" with input .nd2 or .tif files.
+inDir = "/mnt/c/users/SDH/Desktop/" # Path for directory should contain folder titled "IN" with input .nd2 or .tif files. This package can process multiple .nd2/.tif files.
 
 dFluor.main.dif(pathDir=inDir)
 
@@ -55,7 +55,8 @@ import dFluor
 outDir = "/mnt/c/users/SDH/Desktop/OUT/out_241015_15.07.39___" # path for output directory calculated by dFluor.main.dif()
 
 dFluor.summarize.auto(pathDir=outDir)
-dFluor.summarize.manual(pathDir=outDir, imgPathNum=0)
+dFluor.summarize.manual(pathDir=outDir, imgPathNum=0) # imgPathNum specifies which file to summarize in the folder using a zero-based index
+
 
 '''Default arguments in dFluor.summarize.auto()
 pathDir = "/mnt/c/users/SDH/Desktop/OUT/out_241014_14.38.17___TestRun"  # get specified folder
