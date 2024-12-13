@@ -23,9 +23,9 @@ like
 Differential values could be calculated as follows.  
 ```
 import dFluor
-pathDir = "/mnt/c/users/SDH/Desktop/" # Path for directory should contain folder titled "IN" with input .nd2 or .tif files.
+inDir = "/mnt/c/users/SDH/Desktop/" # Path for directory should contain folder titled "IN" with input .nd2 or .tif files.
 
-dFluor.main.dif(pathDir)
+dFluor.main.dif(pathDir=inDir)
 
 '''default arguments in dFluor.main.dif()
 taskName       = "task"           # Appended to the output folder name
@@ -54,8 +54,8 @@ import dFluor
 
 outDir = "/mnt/c/users/SDH/Desktop/OUT/out_241015_15.07.39___" # path for output directory calculated by dFluor.main.dif()
 
-dFluor.summarize.auto(outDir)
-dFluor.summarize.manual(outDir, 0)
+dFluor.summarize.auto(pathDir=outDir)
+dFluor.summarize.manual(pathDir=outDir, imgPathNum=0)
 
 '''Default arguments in dFluor.summarize.auto()
 pathDir = "/mnt/c/users/SDH/Desktop/OUT/out_241014_14.38.17___TestRun"  # get specified folder
@@ -67,7 +67,7 @@ speed = 1                                                               # Playba
 
 '''Default arguments in dFluor.summarize.manual()
 pathDir = "/mnt/c/users/SDH/Desktop/OUT/out_241014_14.38.17___TestRun"  # get specified folder
-imgPathNum = 1                                                          # Number of the file to be processed in the specified folder
+imgPathNum = 0                                                          # Number of the file to be processed in the specified folder
 rawOrSt = "raw"                                                         # Choose whether to use raw or standardized data in the summarized plot. Enter 'raw' or 'st'. 
                                                                         # The difference between raw and st is only whether the diff values are divided by the background frame.
 cbarTicks = False                                                       # cbar ticks and labels
